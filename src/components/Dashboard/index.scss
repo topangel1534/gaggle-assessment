@@ -1,0 +1,88 @@
+.dashboard {
+  background-color: #ebebeb;
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    .logo-section {
+      margin-left: 12px;
+    }
+
+    &-content {
+      display: flex;
+      padding-right: 12.8px;
+      align-items: center;
+      > svg {
+        margin-right: 4px;
+      }
+      > div {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.15px;
+        font-weight: 700;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .vertical-line {
+        width: 2px;
+        height: 24px;
+        line-height: 24px;
+        background: #eee;
+        margin: 0 1rem;
+      }
+    }
+  }
+
+  &-toolbox {
+    margin: 8px 24px;
+    display: flex;
+    justify-content: space-between;
+    .toolbox-left,
+    .toolbox-right {
+      display: flex;
+    }
+
+    .toolbox-left,
+    .toolbox-right {
+      > .tool-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 24px;
+        width: 48px;
+        margin-right: 18px;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+        border-radius: 3px;
+        padding: 2px 4px;
+      }
+    }
+
+    .toolbox-right {
+      .filter-item {
+        display: flex;
+        justify-content: center;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+        border-radius: 3px;
+        background-color: #fff;
+        align-items: center;
+        padding: 2px 0;
+        width: 238px;
+        height: 24px;
+        font-size: 16px;
+        margin-right: 4px;
+        font-weight: 500;
+        line-height: 20px;
+        svg {
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+
+  .logo {
+    padding-top: 10.752px;
+    padding-left: 12.8px;
+  }
+}
