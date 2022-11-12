@@ -46,7 +46,7 @@ export default () => {
       >
         <Fade in={open}>
           <Box sx={style}>
-            <SignUp />
+            <SignUp onClose={handleClose} />
           </Box>
         </Fade>
       </Modal>

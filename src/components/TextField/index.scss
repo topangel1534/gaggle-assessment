@@ -1,12 +1,22 @@
 .text-field {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
   border-radius: 3px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
   width: 100%;
+  min-width: 192px;
+
+  .input-field {
+    display: flex;
+    justify-content: space-between;
+    input {
+      width: 100%;
+    }
+  }
 
   .caption {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0 8px;
     .label,
     .option {
@@ -16,6 +26,18 @@
       line-height: 12px;
       margin-bottom: 2px;
     }
+
+    .option {
+      display: flex;
+      align-items: center;
+      &:hover {
+        cursor: pointer;
+      }
+      svg {
+        height: 12px;
+        margin-right: 2px;
+      }
+    }
   }
 
   input {
@@ -24,6 +46,9 @@
     margin-left: 6px;
     &:focus-visible {
       outline: none;
+    }
+    &:focus {
+      border-bottom: 2px solid #263a91;
     }
   }
 }

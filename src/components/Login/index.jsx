@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
@@ -7,6 +9,7 @@ import './index.scss';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default () => {
+  const navigate = useNavigate();
   return (
     <div className="login">
       <TextField label="Username" />
@@ -17,7 +20,9 @@ export default () => {
           label="Remember"
         />
       </FormGroup>
-      <div className="sign-on-button">Sign On</div>
+      <div className="sign-on-button" onClick={() => navigate('/dashboard')}>
+        Sign On
+      </div>
     </div>
   );
 };

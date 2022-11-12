@@ -2,7 +2,7 @@ import TextField from 'components/TextField';
 import './index.scss';
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default () => {
+export default ({ onClose }) => {
   return (
     <div className="sign-up">
       <div className="sign-up-header">
@@ -15,7 +15,7 @@ export default () => {
         </div>
       </div>
       <div className="sign-up-footer">
-        <div>Cancel</div>
+        <div onClick={onClose}>Cancel</div>
         <div>Register Account</div>
       </div>
     </div>
