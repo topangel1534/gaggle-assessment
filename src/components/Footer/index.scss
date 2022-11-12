@@ -1,0 +1,22 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  > div {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.15px;
+    color: #263a91;
+    font-weight: 700;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .vertical-line {
+    width: 2px;
+    height: 24px;
+    line-height: 24px;
+    background: #eee;
+    margin: 0 1rem;
+  }
+}

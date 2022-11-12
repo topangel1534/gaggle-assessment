@@ -1,0 +1,29 @@
+.home {
+  display: flex;
+  height: 100%;
+  .home-container {
+    flex: 1;
+
+    .logo {
+      position: fixed;
+      top: 12px;
+      left: 16px;
+    }
+  }
+  .hero-image {
+    width: 50%;
+    height: 100%;
+    background: url(../../assets/hero-image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    line-height: 100%;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 2rem;
+    letter-spacing: 0.34px;
+
+    p {
+      margin-top: 50%;
+    }
+  }
+}
