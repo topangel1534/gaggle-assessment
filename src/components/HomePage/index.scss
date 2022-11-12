@@ -9,6 +9,17 @@
       top: 12px;
       left: 16px;
     }
+
+    .home-content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      .footer {
+        margin-bottom: 2.5rem;
+      }
+    }
   }
   .hero-image {
     width: 50%;

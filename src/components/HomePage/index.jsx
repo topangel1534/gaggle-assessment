@@ -1,4 +1,5 @@
 import Logo from '../../assets/logo--Gaggle.svg';
+import Login from 'components/Login';
 import Footer from 'components/Footer';
 import './index.scss';
 
@@ -8,8 +9,11 @@ export default () => {
     <div className="home">
       <div className="home-container">
         <img src={Logo} alt="Logo" className="logo" />
-
-        <Footer />
+        <div className="home-content">
+          <div></div>
+          <Login />
+          <Footer />
+        </div>
       </div>
       <div className="hero-image">
         <p>[ For Placement Only ]</p>
