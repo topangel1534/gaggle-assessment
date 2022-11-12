@@ -81,6 +81,33 @@
     }
   }
 
+  &-columns {
+    display: flex;
+    align-items: center;
+    background: #ebebeb;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 4px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 4px 24px;
+    > div {
+      margin: 2px 4px;
+      font-weight: 500;
+
+      &:first-child {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        width: 300px;
+      }
+    }
+
+    .vertical-line {
+      width: 2px;
+      height: 24px;
+      line-height: 24px;
+      background: rgba(0, 0, 0, 0.3);
+      margin: 0 1rem;
+    }
+  }
+
   .logo {
     padding-top: 10.752px;
     padding-left: 12.8px;

@@ -9,6 +9,11 @@ import ReceiptLongIcon from '@mui/icons-material/ReceiptLong';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import SystemUpdateAltIcon from '@mui/icons-material/SystemUpdateAlt';
 
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
+import TextField from 'components/TextField';
+
 import Logo from 'assets/logo--Gaggle.svg';
 
 import './index.scss';
@@ -56,7 +61,18 @@ export default () => {
           </div>
         </div>
       </div>
-      <p>This is dashboard</p>
+      <div className="dashboard-columns">
+        <div>
+          <FormGroup>
+            <FormControlLabel control={<Checkbox />} />
+          </FormGroup>
+          <div className="register">Date</div>
+        </div>
+        <div className="vertical-line"></div>
+        <div className="register">Incident Type</div>
+        <div className="vertical-line"></div>
+        <div className="forgot-password">Status</div>
+      </div>
     </div>
   );
 };
