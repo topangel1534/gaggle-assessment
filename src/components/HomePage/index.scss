@@ -16,6 +16,11 @@
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
+	  > div {
+		&:first-child {
+			margin-top: 6rem;
+		}
+	  }
       .footer {
         margin-bottom: 2.5rem;
       }

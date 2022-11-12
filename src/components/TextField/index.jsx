@@ -6,11 +6,24 @@ import { useState } from 'react';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default ({ label, option }) => {
-  const [user, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [userInfo, setUserInfo] = useState({ Username: '', Password: '' });
   const [shown, setShown] = useState(false);
 
-  const clearContent = () => {};
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUserInfo((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const clearContent = (param) => {
+    console.log(userInfo, param);
+    setUserInfo((prevState) => ({
+      ...prevState,
+      [param]: '',
+    }));
+  };
 
   return (
     <div className="text-field">
@@ -26,8 +39,13 @@ export default ({ label, option }) => {
         )}
       </div>
       <div className="input-field">
-        <input type={shown && label ? 'password' : 'text'} name={label} />
-        <ClearIcon onClick={clearContent} />
+        <input
+          type={shown && label ? 'password' : 'text'}
+          name={label}
+          value={userInfo[label]}
+          onChange={handleChange}
+        />
+        <ClearIcon onClick={() => clearContent(label)} />
       </div>
     </div>
   );
